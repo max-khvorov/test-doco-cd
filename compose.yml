@@ -7,4 +7,4 @@ services:
     environment:
       TESTER1: BLA1
     volumes:
-        - ../test-doco-cd/test_data:/test-data
+        - ../test-doco-cd2/test_data:/test-data
