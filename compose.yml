@@ -3,6 +3,6 @@ services:
     container_name: busybox1
     image: busybox
     entrypoint: /bin/sh
-    command: -c "while true; do F1 echo $(date +%s); sleep 5; done"
+    command: -c "while true; do echo F1 $(date +%s); sleep 5; done"
     environment:
       TESTER1: BLA1
