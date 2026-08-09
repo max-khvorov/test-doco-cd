@@ -4,8 +4,9 @@ services:
     image: busybox
     entrypoint: /bin/sh
     command: -c "while true; do echo F1 A${TESTER}A $(date +%s); ls -la /test-data; sleep 5; done"
-    environment:
-      TESTER: BLA1
     volumes:
-        - ./data1:/test-data/data1
+        - data:/test-data/data1
         #- ../test-doco-cd2/test_data:/test-data
+
+volumes:
+  data:
