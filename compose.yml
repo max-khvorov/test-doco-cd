@@ -1,8 +1,5 @@
 services:
-  app:
-    container_name: nginx
-    image: nginx:1.31.3
-    ports:
-      - "80"  # use random published port
-    volumes:
-      - ./:/usr/share/nginx/html
+  app1:
+    container_name: busybox1
+    image: busybox
+    command: [/bin/sh, -c, while true; do echo $(date +%s); sleep 1; done']
